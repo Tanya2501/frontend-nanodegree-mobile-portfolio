@@ -15,8 +15,9 @@
 }
 .fix {width:100px;} 
 </style>
-<script async src="js/perfmatters.js"></script>
-<script async src="js/analitics.js"></script>
+<script >
+  function logCRP(){var a=window.performance.timing,b=a.domContentLoadedEventStart-a.domLoading,c=a.domComplete-a.domLoading,d=document.getElementById("crp-stats");d.textContent="DCL: "+b+"ms, onload: "+c+"ms"}window.addEventListener("load",function(a){logCRP()});
+</script>
 </head>
 <body>
 <header>
@@ -62,5 +63,6 @@ w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();}
 ga('create', 'UA-XXXX-Y');
  ga('send', 'pageview');
  </script>
+ <script async src="js/analitics.js"></script>
 </body>
 </html>
